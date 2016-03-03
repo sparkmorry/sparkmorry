@@ -1,0 +1,31 @@
+.social-element {
+    width: 40px;
+    height: 40px;
+    /*background-color: rgba(255,255,255,0.6);*/
+    background-color: #ff8307;
+    opacity: 0.7;
+    background-image: url("/static/images/social.png");
+    transition: 0.5s;
+    display: inline-block;
+    margin-right: 2px;
+    border-bottom: none;
+    border-radius: 20px;
+}
+.i-github {
+    background-position: -160px 40px;
+}
+.i-douban {
+    background-position: -40px 40px;
+}
+.i-linkedin{
+    background-position: -120px -3px;
+}
+.i-google {
+    background-position: -80px 0;
+}
+.i-weibo {
+    background-position: -160px 0;
+}
+.social-element:hover{
+    opacity: 1;
+};

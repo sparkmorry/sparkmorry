@@ -3,17 +3,13 @@
 {% block title %}关于{% endblock %}
 
 {% block content %}
-<link rel="stylesheet" type="text/css" href="/static/css/lib/swiper.min.css">
+<link rel="stylesheet" type="text/css" href="/static/css/icon.css">
 <ul class="nav cf">
 	<li>首页</li>
 	<li>博客</li>
 	<li>实验室</li>
 	<li class="current">关于</li>
 </ul>
-<!-- <div>
-	<img class="cover" src="/static/images/siri/horton.jpg">
-</div>
- -->
 <div class="main-content">
 
 	<div class="intro cf">
@@ -71,48 +67,50 @@
 
 	<div class="gallery">
 		<h2>画集</h2>
-		<div class="swiper-container gallery-top" id="j-gallery">
-	        <div class="swiper-wrapper">
-	           <div class="swiper-slide">
-					<img class="slide-img" src="/static/images/drawings/1.jpg">
-	            </div>
-	            <div class="swiper-slide">
-					<img class="slide-img" src="/static/images/drawings/2.jpg">
-	            </div>
-				<div class="swiper-slide">
-					<img class="slide-img" src="/static/images/drawings/3.jpg">
-	            </div>
-	            <div class="swiper-slide">
-					<img class="slide-img" src="/static/images/drawings/5.jpg">
-	            </div>
-	        </div>
-	        <!-- Add Arrows -->
-	        <div class="swiper-button-next swiper-button-blue" id="j-gallery-next"></div>
-	        <div class="swiper-button-prev swiper-button-blue" id="j-gallery-prev"></div>
+		<div class="gallery" id="j-gallery">
+           <div class="img-wrapper">
+				<img class="slide-img" src="/static/images/drawings/1.jpg">
+            </div>
+            <div class="img-wrapper">
+				<img class="slide-img" src="/static/images/drawings/3.jpg">
+            </div>
+            <div class="img-wrapper">
+				<img class="slide-img" src="/static/images/drawings/6.jpg">
+            </div>
+			<div class="img-wrapper">
+				<img class="slide-img" src="/static/images/drawings/2.jpg">
+            </div>
+            
 	    </div>
 	</div>
 
 	<div class="projects">
 		<h2>相册</h2>
-		<div class="swiper-container gallery-top" id="j-album">
-	        <div class="swiper-wrapper">
-	           <div class="swiper-slide">
-					<img class="slide-img" src="/static/images/siri/horton.jpg">
-	            </div>
-	            <div class="swiper-slide">
-					<img class="slide-img" src="/static/images/photos/bangkok.jpg">
-	            </div>
-				<div class="swiper-slide">
-					<img class="slide-img" src="/static/images/photos/hk.jpg">
-	            </div>
-	            <div class="swiper-slide">
-					<img class="slide-img" src="/static/images/photos/gongga.jpg">
-	            </div>
-	        </div>
-	        <!-- Add Arrows -->
-	        <div id="j-album-next" class="swiper-button-next swiper-button-white"></div>
-	        <div id="j-album-prev" class="swiper-button-prev swiper-button-white"></div>
+		<div class="album" id="j-album">
+           <div class="img-wrapper">
+				<img class="slide-img" src="/static/images/siri/horton.jpg">
+            </div>
+            <div class="img-wrapper">
+				<img class="slide-img" src="/static/images/photos/bangkok.jpg">
+            </div>
+			<div class="img-wrapper">
+				<img class="slide-img" src="/static/images/photos/hk.jpg">
+            </div>
+            <div class="img-wrapper">
+				<img class="slide-img" src="/static/images/photos/gongga.jpg">
+            </div>
 	    </div>
+	</div>
+
+
+	<div class="projects">
+		<h2>联系方式</h2>
+		<div class="social-list cf">
+				<i class="social-element i-douban"></i>
+				<i class="social-element i-github"></i>
+				<i class="social-element i-weibo"></i>
+				<i class="social-element i-linkedin"></i>
+		</div>
 	</div>
 </div>
 {% endblock %}
