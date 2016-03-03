@@ -1,0 +1,85 @@
+/*.cover{
+	width: 80%;
+}
+*/
+body{
+	background: #090c10;
+	background-image: url(/static/images/siri/bluefieldblur.jpg);
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	text-align: center;
+	font-size: 14px;
+	color: rgba(255,255,255,0.6);	
+
+}
+.intro{
+	line-height: 2.2em;
+	width: 80%;
+	margin: 30px auto;
+	margin-top: 90px;
+}
+.intro .breif{
+	width: 30%;
+	min-width: 250px;
+}
+.intro .avatar{
+	border-radius: 50%;
+	border: solid 10px rgba(255,255,255,0.4);
+	display: block;
+	margin: 20px auto;
+	width: 150px;
+}
+
+.intro .detail{
+	width: 55%;
+}
+.intro .name{
+	/*font-size: 2em;*/
+	/*font-weight: 700;*/
+	margin-top: 40px;
+	color: rgba(255,255,255,0.9);	
+	font-size: 1.5em;
+
+}
+.intro .pos{
+	font-size: 1.2em;
+
+}
+.intro .bg{
+	/*font-size: 0.7em;*/
+	line-height: 1.4em;
+}
+.intro .email{
+	color: #ff8307;
+	/*font-size: 0.8em;*/
+}
+.intro .detail{
+	color: rgba(0,0,0,0.5);
+	font-size: 1.1em;
+	padding-top: 18px;
+	text-align: left;
+	text-indent: 2em;
+	margin-left: 5%;
+}
+.projects-list{
+	width: 90%;
+	margin: 20px auto;
+}
+.projects .item{
+	width: 30%;
+	/*background: rgba(255,255,255,0.5);*/
+	/*border-radius: 5px;*/
+	padding: 10px;
+	float: left;
+	text-align: center;
+}
+.projects .item .cover{
+	width: 60%;
+	max-width: 150px;
+	min-width: 80px;
+	border: solid 4px rgba(255,255,255,0.4);
+	border-radius: 50%;
+}
+.projects .item p{
+	width: 100%;
+}
