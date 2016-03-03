@@ -3,6 +3,7 @@
 {% block title %}关于{% endblock %}
 
 {% block content %}
+<link rel="stylesheet" type="text/css" href="/static/css/lib/swiper.min.css">
 <ul class="nav cf">
 	<li>首页</li>
 	<li>博客</li>
@@ -13,52 +14,105 @@
 	<img class="cover" src="/static/images/siri/horton.jpg">
 </div>
  -->
+<div class="main-content">
 
-<div class="intro cf">
-	<h2 style="color:rgba(0,0,0,0.5)">关于我</h2>
-	<div class="breif fl">
-		<img src="/static/images/morry.jpg" class="avatar">
-		<h2 class="name">夏梦丽</h2>
-		<p class="pos">前端工程师</p>
-		<p class="bg">浙江大学数字媒体技术专业</p>
-		<p class="bg">美团外卖商家端第一个前端工程师</p>
-		<a href="mailto:morryxia@gmail.com" class="email">morryxia@gmail.com</a>
+	<div class="intro cf">
+		<h2 style="color:rgba(0,0,0,0.5)">关于我</h2>
+		<div class="breif fl">
+			<img src="/static/images/morry.jpg" class="avatar">
+			<h2 class="name">夏梦丽</h2>
+			<p class="pos">前端工程师</p>
+			<p class="bg">浙江大学数字媒体技术专业</p>
+			<p class="bg">加拿大SFU交换生</p>
+			<p class="bg">美团外卖商家端前端工程师</p>
+			<a href="mailto:morryxia@gmail.com" class="email">morryxia@gmail.com</a>
+		</div>
+		<div class="detail fr">
+			<p>深埋一颗设计师心的前端工程师，LOL网瘾少女。大三时去加拿大Simon Fraser University作为交换生学习Interactive Arts and Technology，能熟练的阅读英文文档和流利的听说交流。爱旅行，爱阅读，对简洁和美有执着的追求，爱摄影，爱手绘，希望有一天能自由的描绘看到的美和心中的世界，用画笔，也用代码。</p>
+			<p>主要语言：Javascript、CSS、HTML、Python</p>
+		</div>
 	</div>
-	<div class="detail fr">
-		<p>深埋一颗设计师心的前端工程师，LOL网瘾少女。大三时去加拿大Simon Fraser University作为交换生学习Interactive Arts and Technology，能熟练的阅读英文文档和流利的听说交流。爱旅行，爱阅读，对简洁和美有执着的追求，爱摄影，爱手绘，希望有一天能自由的描绘看到的美和心中的世界，用画笔，也用代码。</p>
-		<p>Js、Css、HTML、Python、</p>
+	<div class="projects">
+		<h2>项目经历</h2>
+		<ul class="projects-list cf">
+			<li class="item">
+				<img class="cover" src="/static/images/projects/waimai.jpg">
+				<p class="p-name">美团外卖商家端</p>
+				<p>PC前端开发</p>
+			</li>
+			<li class="item">
+				<img class="cover" src="/static/images/projects/geek.JPG">
+				<p class="p-name">极客冷链物流系统</p>
+				<p>设计&全栈开发</p>
+			</li>
+			<li class="item">
+				<img class="cover" src="/static/images/projects/hshslogo.png">
+				<p class="p-name">绘事后素时尚微商城</p>
+				<p>H5前端开发</p>
+			</li>
+			<li class="item">
+				<img class="cover" src="/static/images/projects/tieba.jpg">
+				<p class="p-name">百度贴吧合伙人</p>
+				<p>H5全栈开发</p>
+			</li>
+			<li class="item">
+				<img class="cover" src="/static/images/projects/lovesolo.JPG">
+				<p class="p-name">Lovesolo珠宝定制微商城</p>
+				<p>WebGL开发</p>
+			</li>
+			<li class="item">
+				<img class="cover" src="/static/images/projects/macedonian.jpg">
+				<p class="p-name">2D双人合作游戏</p>
+				<p>视觉设计&程序开发</p>
+			</li>
+		</ul>
+
+	</div>
+
+	<div class="gallery">
+		<h2>画集</h2>
+		<div class="swiper-container gallery-top" id="j-gallery">
+	        <div class="swiper-wrapper">
+	           <div class="swiper-slide">
+					<img class="slide-img" src="/static/images/drawings/1.jpg">
+	            </div>
+	            <div class="swiper-slide">
+					<img class="slide-img" src="/static/images/drawings/2.jpg">
+	            </div>
+				<div class="swiper-slide">
+					<img class="slide-img" src="/static/images/drawings/3.jpg">
+	            </div>
+	            <div class="swiper-slide">
+					<img class="slide-img" src="/static/images/drawings/5.jpg">
+	            </div>
+	        </div>
+	        <!-- Add Arrows -->
+	        <div class="swiper-button-next swiper-button-blue" id="j-gallery-next"></div>
+	        <div class="swiper-button-prev swiper-button-blue" id="j-gallery-prev"></div>
+	    </div>
+	</div>
+
+	<div class="projects">
+		<h2>相册</h2>
+		<div class="swiper-container gallery-top" id="j-album">
+	        <div class="swiper-wrapper">
+	           <div class="swiper-slide">
+					<img class="slide-img" src="/static/images/siri/horton.jpg">
+	            </div>
+	            <div class="swiper-slide">
+					<img class="slide-img" src="/static/images/photos/bangkok.jpg">
+	            </div>
+				<div class="swiper-slide">
+					<img class="slide-img" src="/static/images/photos/hk.jpg">
+	            </div>
+	            <div class="swiper-slide">
+					<img class="slide-img" src="/static/images/photos/gongga.jpg">
+	            </div>
+	        </div>
+	        <!-- Add Arrows -->
+	        <div id="j-album-next" class="swiper-button-next swiper-button-white"></div>
+	        <div id="j-album-prev" class="swiper-button-prev swiper-button-white"></div>
+	    </div>
 	</div>
 </div>
-<div class="projects">
-	<h2>项目经历</h2>
-	<ul class="projects-list cf">
-		<li class="item">
-			<img class="cover" src="/static/images/projects/waimai.jpg">
-			<p>美团外卖商家端</p>
-			<p>前端开发</p>
-		</li>
-		<li class="item">
-			<img class="cover" src="/static/images/projects/geek.JPG">
-			<p>极客冷链物流系统</p>
-			<p>网站设计+全栈开发</p>
-		</li>
-		<li class="item">
-			<img class="cover" src="/static/images/projects/hshslogo.png">
-			<p>绘事后素时尚微商城</p>
-			<p>H5前端开发</p>
-		</li>
-		<li class="item">
-			<img class="cover" src="/static/images/projects/tieba.jpg">
-			<p>百度贴吧合伙人</p>
-			<p>H5全栈开发</p>
-		</li>
-		<li class="item">
-			<img class="cover" src="/static/images/projects/lovesolo.JPG">
-			<p>Lovesolo珠宝定制微商城</p>
-			<p>WebGL开发</p>
-		</li>
-	</ul>
-
-</div>
-
- {% endblock %}
+{% endblock %}

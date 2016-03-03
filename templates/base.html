@@ -11,9 +11,9 @@
 	<body>
 		{% block content %}{% endblock %}
 		<script type="text/javascript" src="/static/js/lib/jquery-1.11.2.min.js"></script>
-		<script type="text/javascript" src="/static/js/lib/touch.js"></script>
-
-		<script type="text/javascript" src="/static/js/pages/{{page}}.js"></script>		
-
+		{% if page == 'about' %}	
+		<script type="text/javascript" src="/static/js/lib/swiper.jquery.min.js"></script>
+		{% endif %}
+		<script type="text/javascript" src="/static/js/pages/{{page}}.js"></script>
 	</body>
 </html>
