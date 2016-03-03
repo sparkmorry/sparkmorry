@@ -3,5 +3,62 @@
 {% block title %}关于{% endblock %}
 
 {% block content %}
+<ul class="nav cf">
+	<li>首页</li>
+	<li>博客</li>
+	<li>实验室</li>
+	<li class="current">关于</li>
+</ul>
+<!-- <div>
+	<img class="cover" src="/static/images/siri/horton.jpg">
+</div>
+ -->
 
-{% endblock %}
+<div class="intro cf">
+	<h2>关于我</h2>
+	<div class="breif fl">
+		<img src="/static/images/morry.jpg" class="avatar">
+		<h2 class="name">夏梦丽</h2>
+		<p class="pos">前端工程师</p>
+		<p class="bg">浙江大学数字媒体技术专业</p>
+		<p class="bg">美团外卖商家端第一个前端工程师</p>
+		<a href="mailto:morryxia@gmail.com" class="email">morryxia@gmail.com</a>
+	</div>
+	<div class="detail fr">
+		<p>深埋一颗设计师心的前端工程师，LOL网瘾少女。大三时去加拿大Simon Fraser University作为交换生学习Interactive Arts and Technology，能熟练的阅读英文文档和流利的听说交流。爱旅行，爱阅读，对简洁和美有执着的追求，爱摄影，爱手绘，希望有一天能自由的描绘看到的美和心中的世界，用画笔，也用代码。</p>
+		<p>Js、Css、HTML、Python、</p>
+	</div>
+</div>
+<div class="projects">
+	<h2>项目经历</h2>
+	<ul class="projects-list cf">
+		<li class="item">
+			<img class="cover" src="/static/images/projects/waimai.jpg">
+			<p>美团外卖商家端</p>
+			<p>前端开发</p>
+		</li>
+		<li class="item">
+			<img class="cover" src="/static/images/projects/geek.JPG">
+			<p>极客冷链物流系统</p>
+			<p>网站设计+全栈开发</p>
+		</li>
+		<li class="item">
+			<img class="cover" src="/static/images/projects/hshslogo.png">
+			<p>绘事后素时尚微商城</p>
+			<p>H5前端开发</p>
+		</li>
+		<li class="item">
+			<img class="cover" src="/static/images/projects/tieba.jpg">
+			<p>百度贴吧合伙人</p>
+			<p>H5全栈开发</p>
+		</li>
+		<li class="item">
+			<img class="cover" src="/static/images/projects/lovesolo.JPG">
+			<p>Lovesolo珠宝定制微商城</p>
+			<p>WebGL开发</p>
+		</li>
+	</ul>
+
+</div>
+
+ {% endblock %}
