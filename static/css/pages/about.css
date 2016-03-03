@@ -111,12 +111,13 @@ h2{
 .slide-img{
 	width: 400px;
 	margin: 10px;
+	border-radius: 3px;
 }
 .social-list li{
 	float: left;
 	margin-right: 10px;
 
 }
-.social-element{
+.social-list .social-element{
 	margin-right: 10px;
 }
