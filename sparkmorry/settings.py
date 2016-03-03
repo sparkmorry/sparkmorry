@@ -56,12 +56,25 @@ WSGI_APPLICATION = 'sparkmorry.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
+# import sae.const
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': sae.const.MYSQL_DB,
+#         'USER': sae.const.MYSQL_USER,
+#         'PASSWORD': sae.const.MYSQL_PASS,  # 你的数据库密码
+#         'HOST': sae.const.MYSQL_HOST,  # 你的数据库主机，留空默认为localhost
+#         'PORT': int(sae.const.MYSQL_PORT),  # 你的数据库端口
+#     }
+# }
+
 
 TEMPLATE_CONTEXT_PROCESSORS = TCP + (
     'django.core.context_processors.request',
