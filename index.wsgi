@@ -1,4 +1,4 @@
 import sae
-from windcity import wsgi
+from sparkmorry import wsgi
 
 application = sae.create_wsgi_app(wsgi.application)
