@@ -76,26 +76,72 @@ h2{
 	margin: 20px auto;
 }
 .projects .item{
-	width: 22%;
-	/*background: rgba(255,255,255,0.5);*/
-	/*border-radius: 5px;*/
-	padding: 10px;
+	width: 180px;
+	height: 230px;
+	/*padding: 10px;*/
+	margin-bottom: 10px;
 	float: left;
 	text-align: center;
+	position: relative;
+	margin-right: 35px;
+	perspective: 1000;
 }
-.projects .item .cover{
+.projects .item .flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+.flipper:hover{
+	transform: rotateY(180deg);
+}
+.projects .item .front, .projects .item .back{
+	position: absolute;
+	display: block;
+	width: 180px;
+	height: 160px;
+	text-align: center;
+	top: 0;
+	left: 0;
+	backface-visibility: hidden;
+}
+.item .front{
+	z-index: 2;
+	transform: rotateY(0deg);
+}
+.item .back{
+	transform: rotateY(180deg);
+}
+.projects .item .desc{
+	position: absolute;
+	bottom: 20px;
+	width: 100%;
+	color: rgba(255,255,255,0.8);
+	line-height: 1.5em;
+}
+.projects .cover{
+	width: 150px;
+	border-radius: 50%;
+	border: solid 4px rgba(255,255,255,0.4);
+}
+.item .back .des-wrapper{
+	width: 150px;
+	border-radius: 50%;
+	border: solid 4px rgba(255,255,255,0.4);
+	padding-top: 50px;
+	height: 100px;
+	line-height: 1.3em;
+	margin: auto;
+	background: white;
+	color: black;
+}
+/*.projects .item .cover{
 	width: 60%;
 	max-width: 150px;
 	min-width: 80px;
 	border: solid 4px rgba(255,255,255,0.4);
 	border-radius: 50%;
 	margin-bottom: 10px;
-}
-.projects .item p{
-	width: 100%;
-	line-height: 1.5em;
-	color: rgba(255,255,255,0.8);
-}
+}*/
 .projects .item .p-name{
 	color: white;
 	font-weight: 700;
