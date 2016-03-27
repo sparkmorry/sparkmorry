@@ -29,7 +29,7 @@ h2{
 	margin-bottom: 10px;
 }
 .article-list a{
-	color: white;
+	color: rgba(255,255,255,0.8);
 }
 .article-list li p{
 	font-size: 1.2em;
