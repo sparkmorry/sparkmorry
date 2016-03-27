@@ -20,8 +20,16 @@ body{
 h2{
 	margin-bottom: 20px;
 }
+.article-list{
+	width: 400px;
+    margin: auto;
+    text-align: left;
+}
 .article-list li{
 	margin-bottom: 10px;
+}
+.article-list a{
+	color: white;
 }
 .article-list li p{
 	font-size: 1.2em;

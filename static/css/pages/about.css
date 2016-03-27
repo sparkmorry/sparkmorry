@@ -86,6 +86,9 @@ h2{
 	margin-right: 35px;
 	perspective: 1000;
 }
+.qrcode{
+	width: 90px;
+}
 .projects .item .flipper {
 	transition: 0.6s;
 	transform-style: preserve-3d;
