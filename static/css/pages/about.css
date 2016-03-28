@@ -6,6 +6,7 @@ body{
 	background: #090c10;
 	background-image: url(/static/images/siri/bluefieldblur.jpg);
 	background-size: 100% auto;
+	-webkit-background-size: 100% auto;
 	background-repeat: no-repeat;
 	text-align: center;
 	font-size: 14px;
