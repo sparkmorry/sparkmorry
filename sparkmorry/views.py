@@ -13,7 +13,10 @@ def about(request):
 	js='about'
 	return render_to_response('about.html', {'page': js})
 
-
 def blog(request):
 	js='blog'
 	return render_to_response('blog.html', {'page': js})
+
+def article(request):
+	js='article'
+	return render_to_response('article.html', {'page': js})
