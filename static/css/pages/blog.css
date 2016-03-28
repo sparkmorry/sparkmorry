@@ -1,8 +1,5 @@
 body{
 	background: #5b6571;
-	background-image: url(/static/images/siri/bluefieldblur.jpg);
-	background-size: 100% auto;
-	background-repeat: no-repeat;
 	text-align: center;
 	font-size: 14px;
 	color: rgba(255,255,255,0.6);	
@@ -11,11 +8,7 @@ body{
 .main-content{
 	width: 960px;
     margin: auto;
-    /*background-color: #ebf2fa;*/
     margin-top: 60px;
-    /*border-radius: 4px;*/
-    /*border: solid 1px white;*/
-    /*color: #06050a;*/
 }
 h2{
 	margin-bottom: 20px;

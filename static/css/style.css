@@ -13,6 +13,13 @@ ul{
     overflow: hidden;
     visibility: hidden;	
 }
+.bg-img{
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: -10;
+}
 .nav{
 	width: 100%;
 	background: rgba(0,0,0,0.3);

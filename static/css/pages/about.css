@@ -4,16 +4,15 @@
 */
 body{
 	background: #090c10;
-	background-image: url(/static/images/siri/bluefieldblur.jpg);
-    -webkit-background-size: 100% auto; 
-    -moz-background-size: 100% auto; 
-    -o-background-size: 100% auto; 
-    background-size: 100% auto;
-	background-repeat: no-repeat;
 	text-align: center;
 	font-size: 14px;
 	color: rgba(255,255,255,0.6);	
 	padding-bottom: 50px;
+}
+@media screen and (max-width:600px){
+	body{
+		font-size:12px;
+	}
 }
 .main-content{
 	width: 960px;
