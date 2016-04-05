@@ -11,7 +11,7 @@ urlpatterns = patterns('',
     url(r'^$', 'sparkmorry.views.home',),
     url(r'^about/$', 'sparkmorry.views.about',),
     url(r'^blog/$', 'sparkmorry.views.blog',),
-    url(r'^article/$', 'sparkmorry.views.article',),
+    url(r'^article/(?P<article_id>\d+)/$', 'sparkmorry.views.article',),
 
     url(r'^admin/', include(admin.site.urls)),
 )

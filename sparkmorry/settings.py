@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'article',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -64,6 +65,17 @@ WSGI_APPLICATION = 'sparkmorry.wsgi.application'
 #         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
 #     }
 # }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'sparkmorry',  # 你的数据库名称
+        'USER': 'root',  # 你的数据库用户名
+        'PASSWORD': '',  # 你的数据库密码        
+        'HOST': '',  # 你的数据库主机，留空默认为localhost
+        'PORT': '3306',  # 你的数据库端口
+        # 'OPTIONS': {'charset': 'utf8mb4'},
+    }
+}
 
 # import sae.const
 # DATABASES = {
@@ -100,7 +112,6 @@ TEMPLATE_DIRS = (
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
     os.path.join(BASE_DIR, 'templates').replace('\\', '/'),
-
 )
 
 
@@ -110,8 +121,19 @@ TEMPLATE_DIRS = (
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': [['CodeSnippet', ], ],
+        'height': 400,
+        'width': 900,
+        'removePlugins': 'stylesheetparser',
+        'extraPlugins': 'codesnippet',
+    },
+}
 STATICFILES_DIRS = (
     ("css", os.path.join(STATIC_ROOT, 'css')),
     ("js", os.path.join(STATIC_ROOT, 'js')),
     ("images", os.path.join(STATIC_ROOT, 'images')),
+    ("ckeditor", os.path.join(STATIC_ROOT, 'ckeditor')),
+
 )

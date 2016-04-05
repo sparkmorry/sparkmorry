@@ -17,6 +17,6 @@ def blog(request):
 	js='blog'
 	return render_to_response('blog.html', {'page': js})
 
-def article(request):
+def article(request, article_id):
 	js='article'
 	return render_to_response('article.html', {'page': js})
