@@ -13,6 +13,25 @@ ul{
     overflow: hidden;
     visibility: hidden;	
 }
+body{
+	background: #090c10;
+	text-align: center;
+	font-size: 14px;
+	color: rgba(255,255,255,0.6);	
+	padding-bottom: 50px;
+}
+@media screen and (max-width:600px){
+	body{
+		font-size:12px;
+	}
+}
+.main-content{
+	width: 960px;
+    margin: auto;
+}
+h2{
+	margin-bottom: 20px;
+}
 .bg-img{
 	width: 100%;
 	position: absolute;
@@ -55,4 +74,7 @@ ul{
 }
 .nav a{
 	color: white;
+}
+.tc-orange{
+	color: #ff8307;
 }

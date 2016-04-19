@@ -2,6 +2,9 @@
 from django.shortcuts import render_to_response
 from django.http import HttpResponse
 from django.http import HttpResponseRedirect
+from django.core.exceptions import ObjectDoesNotExist
+
+from article.models import Article
 
 def home(request):
 	js='home'
@@ -15,8 +18,16 @@ def about(request):
 
 def blog(request):
 	js='blog'
-	return render_to_response('blog.html', {'page': js})
+	articles = Article.objects.filter(status=0)[0:15]
+	return render_to_response('blog.html', {'page': js, 
+		'articles':articles})
 
 def article(request, article_id):
 	js='article'
-	return render_to_response('article.html', {'page': js})
+	try:
+		article = Article.objects.get(id=article_id)
+		return render_to_response('article.html', {'page': js, 
+			'article':article})
+	except ObjectDoesNotExist:
+		return render_to_response('noarticle.html', {'page': js})
+
