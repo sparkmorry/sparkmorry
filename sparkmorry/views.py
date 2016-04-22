@@ -23,6 +23,19 @@ def blog(request):
 	return render_to_response('blog.html', {'page': js, 
 		'articles':articles})
 
+def lab(request):
+	page='lab'
+	return render_to_response('lab.html', {'page': page})
+
+def gallery(request):
+	page='gallery'
+	return render_to_response('gallery.html', {'page': page})
+
+def tag(request, tag_id):
+	page='tag'
+	return render_to_response('tag.html', {'page': page})
+
+
 def article(request, article_id):
 	js='article'
 	try:
