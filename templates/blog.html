@@ -35,12 +35,13 @@
 				<div></div>
 				<a href="http://sparkmorry.github.io/"><p>历史文章</p></a>
 			</li>
+			{% for article in articles %}
 			<li>
-				<div></div>
-				{% for article in articles %}
-					<a href="/article/{{article.id}}"><p><span>{{article.ctime | date:"Y-m-d H:i:s"}}  </span>{{article.title}}</p></a>
-				{% endfor %}
+				<a href="/article/{{article.id}}">
+					<p><span>{{article.ctime | date:"Y-m-d H:i:s"}}  </span>{{article.title}}</p>
+				</a>
 			</li>
+			{% endfor %}
 		</ul>
 	</div>
 	
