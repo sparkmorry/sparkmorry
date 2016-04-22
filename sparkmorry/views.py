@@ -5,6 +5,7 @@ from django.http import HttpResponseRedirect
 from django.core.exceptions import ObjectDoesNotExist
 
 from article.models import Article
+from tag.models import TagArticleRelation
 
 def home(request):
 	js='home'
@@ -26,8 +27,9 @@ def article(request, article_id):
 	js='article'
 	try:
 		article = Article.objects.get(id=article_id)
+		tag_relations = TagArticleRelation.objects.filter(article_id=article.id)
 		return render_to_response('article.html', {'page': js, 
-			'article':article})
+			'article':article, 'tag_list':tag_relations})
 	except ObjectDoesNotExist:
 		return render_to_response('noarticle.html', {'page': js})
 

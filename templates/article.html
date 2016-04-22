@@ -12,7 +12,13 @@
 <div class="main-content">
 
 	<h2 class="tc-orange article-title">{{article.title}}</h2>
-	<p class="info"><span class="time">{{article.ctime | date:"Y-m-d H:i:s"}}</span>标签： <a href="/tag/1/" class="tag">随感</a><a href="/tag/1/" class="tag">生活</a> </p>
+	<p class="info">
+		<span class="time">{{article.ctime | date:"Y-m-d H:i:s"}}</span>
+		标签： 
+		{% for relation in tag_list %}
+		<a href="/tag/{{relation.tag.id}}/" class="tag">{{relation.tag.name}}</a>
+		{% endfor %}
+	</p>
 	<div class="article-content">
 		{% autoescape off %}
 			{{article.content}}
