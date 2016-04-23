@@ -1,0 +1,15 @@
+.article-list{
+	width: 400px;
+    margin: auto;
+    text-align: left;
+}
+.article-list li{
+	margin-bottom: 10px;
+}
+.article-list a{
+	color: rgba(255,255,255,0.8);
+}
+.article-list li p{
+	font-size: 1.2em;
+	font-weight: 700;
+}

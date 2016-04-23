@@ -5,7 +5,7 @@ from django.http import HttpResponseRedirect
 from django.core.exceptions import ObjectDoesNotExist
 
 from article.models import Article
-from tag.models import TagArticleRelation
+from tag.models import TagArticleRelation, Tag
 
 def home(request):
 	js='home'
@@ -33,7 +33,17 @@ def gallery(request):
 
 def tag(request, tag_id):
 	page='tag'
-	return render_to_response('tag.html', {'page': page})
+	try:
+		tag = Tag.objects.get(id=tag_id)
+	except ObjectDoesNotExist:
+		return render_to_response('noarticle.html', {'page': page, })
+	
+	records = TagArticleRelation.objects.filter(tag_id=tag_id)
+	articles = []
+	for record in records:
+		articles.append(record.article)
+	return render_to_response('tag.html', {'page': page, 
+		'articles':articles, 'tag':tag})
 
 
 def article(request, article_id):

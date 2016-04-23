@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}{{tag.name}}相关的文章{% endblock %}
+
+{% block content %}
+<div class="main-content">
+	<div class="intro cf">
+		<h2 style="color:rgba(0,0,0,0.5)">关于这个博客</h2>
+		<div class="breif fl">
+			<img src="/static/images/morry.jpg" class="avatar">
+			<h2 class="name">夏梦丽</h2>
+			<p class="pos">前端工程师、独立开发者</p>
+			<p class="bg">浙江大学数字媒体技术专业</p>
+			<p class="bg">美团外卖商家端前端工程师</p>
+			<a href="mailto:morryxia@gmail.com" class="email">morryxia@gmail.com</a>
+		</div>
+		<div class="detail fr">
+			<p>写博客的血泪史可以从初中时候写qq空间算起，但从刚开始接触web开发，也先后在<a class="tc-orange" href="http://www.cnblogs.com/sparkmorry/">博客园</a>和<a class="tc-orange" href="http://sparkmorry.github.io/">github</a>写过一些总结。现在工作了，为了更高的自由度，打算完全自己搭建一个，主要采用比较熟悉的django框架，作为自己技术学习的一个记录工具。因为个人兴趣，这个博客会主要包括前端开发和游戏开发的学习，也会记录一些自己的读书或者生活心得。当然如果能和更多的人一起讨论交流是更好的啦。</p>
+			<p>交流合作欢迎联系邮箱<a href="mailto:morryxia@gmail.com" class="email">morryxia@gmail.com</a></p>
+		</div>
+	</div>
+	<div style="margin-top:50px;">
+		<h2>{{tag.name}}相关的文章</h2>
+		<ul class="article-list">
+			{% for article in articles %}
+			<li>
+				<a href="/article/{{article.id}}">
+					<p><span>{{article.ctime | date:"Y-m-d H:i:s"}}  </span>{{article.title}}</p>
+				</a>
+			</li>
+			{% endfor %}
+		</ul>
+	</div>
+	
+</div>
+{% endblock %}
