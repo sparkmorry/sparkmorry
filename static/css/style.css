@@ -53,8 +53,8 @@ h2{
 }
 .nav li{
 	float: left;
-	/*width: 25%;*/
 	width: 25%;
+	width: 50%;
 	box-sizing:border-box;
 	text-align: center;
 	opacity: 0.5;
