@@ -19,7 +19,7 @@ def about(request):
 
 def blog(request):
 	js='blog'
-	articles = Article.objects.filter(status=0)[0:15]
+	articles = Article.objects.filter(status=0).order_by('-id')[0:15]
 	return render_to_response('blog.html', {'page': js, 
 		'articles':articles})
 
@@ -49,7 +49,7 @@ def tag(request, tag_id):
 def article(request, article_id):
 	js='article'
 	try:
-		article = Article.objects.get(id=article_id).order_by('-id')
+		article = Article.objects.get(id=article_id)
 		tag_relations = TagArticleRelation.objects.filter(article_id=article.id)
 		return render_to_response('article.html', {'page': js, 
 			'article':article, 'tag_list':tag_relations})
