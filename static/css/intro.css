@@ -10,6 +10,7 @@ h2{
 .intro .breif{
 	width: 30%;
 	min-width: 250px;
+	float: left;
 }
 .intro .avatar{
 	border-radius: 50%;
@@ -21,6 +22,7 @@ h2{
 
 .intro .detail{
 	width: 55%;
+	float: right;
 }
 .intro .name{
 	/*font-size: 2em;*/
@@ -62,5 +64,8 @@ h2{
 	.intro .breif{
 		float: none;
 		margin: auto;
+	}
+	.intro{
+		margin-top: 70px;
 	}
 }

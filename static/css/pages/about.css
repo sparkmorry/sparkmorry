@@ -1,58 +1,5 @@
-/*.cover{
-	width: 80%;
-}
-*/
+@import url(../intro.css);
 
-.intro{
-	line-height: 2.2em;
-	/*width: 80%;*/
-	margin: 30px auto;
-	margin-top: 90px;
-}
-.intro .breif{
-	width: 30%;
-	min-width: 250px;
-	float: left;
-}
-.intro .avatar{
-	border-radius: 50%;
-	border: solid 10px rgba(255,255,255,0.4);
-	display: block;
-	margin: 0px auto;
-	width: 150px;
-}
-
-.intro .detail{
-	width: 55%;
-	float: right;
-}
-.intro .name{
-	/*font-size: 2em;*/
-	/*font-weight: 700;*/
-	margin-top: 20px;
-	color: rgba(255,255,255,0.9);	
-	font-size: 1.5em;
-}
-.intro .pos{
-	font-size: 1.2em;
-
-}
-.intro .bg{
-	/*font-size: 0.7em;*/
-	line-height: 1.4em;
-}
-.intro .email{
-	color: #ff8307;
-	/*font-size: 0.8em;*/
-}
-.intro .detail{
-	color: rgba(0,0,0,0.5);
-	font-size: 1.1em;
-	padding-top: 18px;
-	text-align: left;
-	text-indent: 2em;
-	margin-left: 5%;
-}
 .projects{
 	margin-top: 100px;
 }
@@ -156,17 +103,6 @@
 	margin-right: 10px;
 }
 @media screen and (max-width:600px){
-	.intro .detail{
-		color: rgba(255,255,255,0.6);
-		float: none;
-		margin: auto;
-		text-align: justify;
-		width: 80%;
-	}
-	.intro .breif{
-		float: none;
-		margin: auto;
-	}
 	.projects .item{
 		width: 47%;
 		max-width: 170px;
