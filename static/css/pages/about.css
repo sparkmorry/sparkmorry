@@ -12,6 +12,7 @@
 .intro .breif{
 	width: 30%;
 	min-width: 250px;
+	float: left;
 }
 .intro .avatar{
 	border-radius: 50%;
@@ -23,6 +24,7 @@
 
 .intro .detail{
 	width: 55%;
+	float: right;
 }
 .intro .name{
 	/*font-size: 2em;*/
@@ -30,7 +32,6 @@
 	margin-top: 20px;
 	color: rgba(255,255,255,0.9);	
 	font-size: 1.5em;
-
 }
 .intro .pos{
 	font-size: 1.2em;
@@ -153,4 +154,37 @@
 }
 .social-list .social-element{
 	margin-right: 10px;
+}
+@media screen and (max-width:600px){
+	.intro .detail{
+		color: rgba(255,255,255,0.6);
+		float: none;
+		margin: auto;
+		text-align: justify;
+		width: 80%;
+	}
+	.intro .breif{
+		float: none;
+		margin: auto;
+	}
+	.projects .item{
+		width: 47%;
+		max-width: 170px;
+		margin-right: 6%;
+	}
+	.projects .item:nth-child(2n){
+		margin-right: 0;
+	}
+	.projects .item .front, .projects .item .back{
+		width: 100%;
+		height: auto;
+	}
+	.projects .cover{
+		width: 100%;
+		height: auto;
+		box-sizing: border-box;
+	}
+	.slide-img{
+		width: 90%;
+	}
 }
