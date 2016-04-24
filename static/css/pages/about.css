@@ -17,6 +17,8 @@
 	position: relative;
 	margin-right: 35px;
 	perspective: 1000;
+	-webkit-perspective: 1000;
+
 }
 .qrcode{
 	width: 90px;
@@ -38,6 +40,7 @@
 	top: 0;
 	left: 0;
 	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
 }
 .item .front{
 	z-index: 2;
