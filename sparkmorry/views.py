@@ -49,8 +49,8 @@ def tag(request, tag_id):
 def article(request, article_id):
 	js='article'
 	try:
-		article = Article.objects.get(id=article_id)
-		tag_relations = TagArticleRelation.objects.filter(article_id=article.id).order_by('-id')
+		article = Article.objects.get(id=article_id).order_by('-id')
+		tag_relations = TagArticleRelation.objects.filter(article_id=article.id)
 		return render_to_response('article.html', {'page': js, 
 			'article':article, 'tag_list':tag_relations})
 	except ObjectDoesNotExist:
