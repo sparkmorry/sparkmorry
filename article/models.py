@@ -5,7 +5,7 @@ from django.db import models
 from datetime import datetime
 
 class Article(models.Model):
-    title = models.CharField('标题', max_length=20)
+    title = models.CharField('标题', max_length=50)
     content = models.TextField('内容')
     ctime = models.DateTimeField('创建时间', max_length=30, auto_now_add=True)
     utime = models.DateTimeField('最新修改时间', max_length=30, auto_now=True)
