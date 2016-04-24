@@ -8,20 +8,21 @@ from article.models import Article
 from tag.models import TagArticleRelation, Tag
 
 def home(request):
-	js='home'
-	# return render_to_response('demo.html', {'page': js})
-	return HttpResponseRedirect("/about/")
+	return HttpResponseRedirect("/blog/")
 
 
 def about(request):
-	js='about'
-	return render_to_response('about.html', {'page': js})
+	page='about'
+	nav='about'
+	return render_to_response('about.html', {'page': page, 
+		'nav':nav})
 
 def blog(request):
-	js='blog'
+	page='blog'
+	nav='blog'
 	articles = Article.objects.filter(status=0).order_by('-id')[0:15]
-	return render_to_response('blog.html', {'page': js, 
-		'articles':articles})
+	return render_to_response('blog.html', {'page': page, 
+		'articles':articles, 'nav':nav})
 
 def lab(request):
 	page='lab'
@@ -33,6 +34,7 @@ def gallery(request):
 
 def tag(request, tag_id):
 	page='tag'
+	nav='blog'
 	try:
 		tag = Tag.objects.get(id=tag_id)
 	except ObjectDoesNotExist:
@@ -43,16 +45,17 @@ def tag(request, tag_id):
 	for record in records:
 		articles.append(record.article)
 	return render_to_response('tag.html', {'page': page, 
-		'articles':articles, 'tag':tag})
+		'articles':articles, 'tag':tag, 'nav':nav})
 
 
 def article(request, article_id):
-	js='article'
+	page='article'
+	nav='blog'
 	try:
 		article = Article.objects.get(id=article_id)
 		tag_relations = TagArticleRelation.objects.filter(article_id=article.id)
-		return render_to_response('article.html', {'page': js, 
-			'article':article, 'tag_list':tag_relations})
+		return render_to_response('article.html', {'page': page, 
+			'article':article, 'tag_list':tag_relations, 'nav':nav})
 	except ObjectDoesNotExist:
-		return render_to_response('noarticle.html', {'page': js})
+		return render_to_response('noarticle.html', {'page': page, 'nav':nav})
 

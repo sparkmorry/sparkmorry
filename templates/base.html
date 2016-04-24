@@ -16,10 +16,10 @@
 		<link rel="stylesheet" type="text/css" href="/static/css/icon.css">
 		<img class="bg-img" src="/static/images/siri/bluefieldblur.jpg">
 		<ul class="nav cf">
-			<a href="/blog/"><li {% if page == 'blog' %} class="current"{% endif %}>文章</li></a>
-			<!-- <a href="/lab/"><li {% if page == 'lab' %} class="current"{% endif %}>实验室</li></a>
-			<a href="/gallery/"><li {% if page == 'gallery' %} class="current"{% endif %}>长廊</li></a> -->
-			<a href="/about/"><li {% if page == 'about' %} class="current"{% endif %}>关于</li></a>
+			<a href="/blog/"><li {% if nav == 'blog' %} class="current"{% endif %}>文章</li></a>
+			<!-- <a href="/lab/"><li {% if nav == 'lab' %} class="current"{% endif %}>实验室</li></a>
+			<a href="/gallery/"><li {% if nav == 'gallery' %} class="current"{% endif %}>长廊</li></a> -->
+			<a href="/about/"><li {% if nav == 'about' %} class="current"{% endif %}>关于</li></a>
 		</ul>
 		{% block content %}{% endblock %}
 		<script type="text/javascript" src="/static/js/lib/jquery-1.11.2.min.js"></script>
