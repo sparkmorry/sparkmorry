@@ -1,3 +1,4 @@
+#coding=utf-8
 from django.conf.urls import patterns, include, url
 
 from django.contrib import admin
@@ -15,6 +16,8 @@ urlpatterns = patterns('',
     url(r'^tag/(?P<tag_id>\d+)/$', 'sparkmorry.views.tag',),
     url(r'^lab/$', 'sparkmorry.views.lab',),
     url(r'^gallery/$', 'sparkmorry.views.gallery',),
+	# 图片上传
+	url(r'^image/upload/$', 'sparkmorry.upload.sceneImgUpload', name='sceneImgUpload' ),
 
     url(r'^admin/', include(admin.site.urls)),
 )
