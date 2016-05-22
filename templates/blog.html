@@ -35,6 +35,18 @@
 			</li>
 			{% endfor %}
 		</ul>
+		<!-- 第一种分页显示方式 -->
+        <div class="pagination">
+            <ul class="cf">
+                {% for page_number in articles.paginator.page_range %}
+                    {% ifequal page_number articles.number %}
+                        <li class="active"><a href="?page={{ page_number }}">{{ page_number }}</a></li>
+                    {% else %}
+                        <li><a href="?page={{ page_number }}">{{ page_number }}</a></li>
+                    {% endifequal %}
+                {% endfor %}
+            </ul>
+        </div>
 	</div>
 	
 </div>

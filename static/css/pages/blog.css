@@ -19,3 +19,22 @@
 		width: 90%;
 	}
 }
+
+.pagination{
+	width: 100px;
+	margin: 30px auto;
+}
+.pagination ul li{
+	float: left;
+    padding: 2px 5px;
+}
+.pagination a{
+	color: white;
+	text-decoration: none;
+}
+.pagination ul li.active{
+	background-color: white;
+}
+.pagination ul li.active a{
+	color: black;
+}
