@@ -19,5 +19,5 @@ urlpatterns = patterns('',
 	# 图片上传
 	url(r'^image/upload/$', 'sparkmorry.upload.sceneImgUpload', name='sceneImgUpload' ),
 
-    url(r'^admin/', include(admin.site.urls)),
+    url(r'^admin/', admin.site.urls),
 )
