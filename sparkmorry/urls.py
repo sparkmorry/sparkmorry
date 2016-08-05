@@ -16,8 +16,8 @@ urlpatterns = patterns('',
     url(r'^tag/(?P<tag_id>\d+)/$', 'sparkmorry.views.tag',),
     url(r'^lab/$', 'sparkmorry.views.lab',),
     url(r'^gallery/$', 'sparkmorry.views.gallery',),
+    url(r'^admin/', admin.site.urls, ),
 	# 图片上传
 	url(r'^image/upload/$', 'sparkmorry.upload.sceneImgUpload', name='sceneImgUpload' ),
 
-    url(r'^admin/', admin.site.urls),
 )

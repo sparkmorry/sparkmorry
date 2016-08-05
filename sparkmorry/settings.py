@@ -91,11 +91,6 @@ DATABASES = {
 #     }
 # }
 
-
-TEMPLATE_CONTEXT_PROCESSORS = TCP + (
-    'django.core.context_processors.request',
-)
-
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
 
