@@ -9,15 +9,15 @@ from django.conf import settings
 
 urlpatterns = patterns('',
     # Examples:
-    url(r'^$', 'sparkmorry.views.home',),
-    url(r'^about/$', 'sparkmorry.views.about',),
-    url(r'^blog/$', 'sparkmorry.views.blog',),
-    url(r'^article/(?P<article_id>\d+)/$', 'sparkmorry.views.article',),
-    url(r'^tag/(?P<tag_id>\d+)/$', 'sparkmorry.views.tag',),
-    url(r'^lab/$', 'sparkmorry.views.lab',),
-    url(r'^gallery/$', 'sparkmorry.views.gallery',),
+    url(r'^$', sparkmorry.views.home,),
+    url(r'^about/$', sparkmorry.views.about,),
+    url(r'^blog/$', sparkmorry.views.blog,),
+    url(r'^article/(?P<article_id>\d+)/$', sparkmorry.views.article,),
+    url(r'^tag/(?P<tag_id>\d+)/$', sparkmorry.views.tag,),
+    url(r'^lab/$', sparkmorry.views.lab,),
+    url(r'^gallery/$', sparkmorry.views.gallery,),
     url(r'^admin/', admin.site.urls, ),
 	# 图片上传
-	url(r'^image/upload/$', 'sparkmorry.upload.sceneImgUpload', name='sceneImgUpload' ),
+	url(r'^image/upload/$', sparkmorry.upload.sceneImgUpload, name='sceneImgUpload' ),
 
 )
